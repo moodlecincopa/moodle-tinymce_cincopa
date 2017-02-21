@@ -56,9 +56,10 @@
                                 } else {
                                     for (var i = 0; i < result.response.folders.length; i++) {
                                         var did = result.response.folders[i].sysdata.did;
-                                        m.add({title: result.response.folders[i].sysdata.name + '(id:' + result.response.folders[i].sysdata.did + ')<br> Modified:' + result.response.folders[i].sysdata.modified, onclick: function (e) {
-                                                tinymce.activeEditor.execCommand('mceInsertContent', false, "[cincopa " + did + "]");
-                                            }});
+                                        var obj={id:result.response.folders[i].sysdata.did ,title: result.response.folders[i].sysdata.name + '(id:' + result.response.folders[i].sysdata.did + ')<br> Modified:' + result.response.folders[i].sysdata.modified, onclick: function (e) {
+                                                tinymce.activeEditor.execCommand('mceInsertContent', false, "[cincopa " +  this.id + "]");
+                                            }}
+                                        m.add(obj);
                                     }
                                 }
                             }
