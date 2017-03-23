@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -14,16 +15,11 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
- * TinyMCE Cincopa plugin version details.
+ * This file defines the admin settings for this plugin
  *
  * @package   tinymce_cincopa
  * @copyright Cincopa LTD <moodle@cincopa.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = 'Cincopa TinyMCE';
-
-$string['cincopa:buttontitle'] = 'Cincopa Media';
-$string['cincopa:login'] = 'Login';
-$string['cincopa:register'] = 'Register';
-$string['cincopa:loginorregister'] = 'Login or Register to cincopa to see this list';
-$string['description'] = '<div style="margin:10px;padding:15px;background-color:#f5f5f5;border:2px solid #e3e3e3;"><img src="https://www.cincopa.com/_cms/design15/icons/favicon-32.png?affdata=moodle-plugin-tinymce,setup-page"> Welcome to Cincopa Moodle plugin, check our <a href="https://www.cincopa.com/moodle/welcome" target="_blank">welcome page</a> for registration and support documents.</div>';
+$description = new lang_string('description', 'tinymce_cincopa');
+$settings->add(new admin_setting_heading('defaultsettings', '', $description));
