@@ -24,7 +24,8 @@
                         image: theurl + '/img/cincopa2.png',
                         onclick: function () {
                             tinyMCE.activeEditor.windowManager.open({
-                                url: 'http://www.cincopa.com/media-platform/start.aspx',
+                                //url: 'http://www.cincopa.com/media-platform/start.aspx',
+                                url: 'https://www.cincopa.com/media-platform/start.aspx?source=moodle_plugin',
                                 width: screen.width - 200,
                                 height: screen.height - 200,
                                 inline: 1
