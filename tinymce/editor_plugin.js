@@ -5,13 +5,17 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 (function () {
+    var tiny = null;
     var jq = document.createElement("script");
 
     jq.src = "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js";
     document.querySelector("head").appendChild(jq);
     var DOM = tinymce.DOM;
-
     tinymce.PluginManager.requireLangPack('cincopa');
+
+
+
+
     tinymce.create('tinymce.plugins.cincopa', {init: function (ed, url) {
             var s = ed.settings;
             theurl = url;
@@ -23,9 +27,9 @@
                         title: tinymce.activeEditor.getLang('cincopa.buttontitle', 0),
                         image: theurl + '/img/cincopa2.png',
                         onclick: function () {
-                            tinyMCE.activeEditor.windowManager.open({
+                            tiny = tinyMCE.activeEditor.windowManager.open({
                                 //url: 'http://www.cincopa.com/media-platform/start.aspx',
-                                url: 'https://www.cincopa.com/media-platform/start.aspx?source=moodle_plugin',
+                                url: theurl + '/html/cincopa.html',
                                 width: screen.width - 200,
                                 height: screen.height - 200,
                                 inline: 1

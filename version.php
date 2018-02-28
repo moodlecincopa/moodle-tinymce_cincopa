@@ -27,7 +27,7 @@ $plugin->version = 2017110200;			// The current plugin version (Date: YYYYMMDDXX
 $plugin->requires = 2014051200;			// Required Moodle version.
 $plugin->component = 'tinymce_cincopa';		// Full name of the plugin (used for diagnostics).
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v1.0.2';
+$plugin->release = 'v1.0.3';
 $plugin->dependencies = array(
     'filter_cincopa' => ANY_VERSION
 );
